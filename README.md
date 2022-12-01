@@ -1,6 +1,6 @@
 # JS_calculateGeometry
 
-# Travaux pratique
+ Travaux pratique
 
-# Définir 3 blocs calculant un volume ou une superficie (triangle, rectangle, cercle)
+ Définir 3 blocs calculant un volume ou une superficie (triangle, rectangle, cercle)
 
