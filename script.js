@@ -1,4 +1,4 @@
-function updateform() {
+function updateForm() {
   //  hide all inputs
   document.getElementById("inputs-circle").hidden = true;
   document.getElementById("inputs-triangle").hidden = true;
@@ -51,5 +51,5 @@ function calculateArea() {
   }
 
   // output the area
-  document.getElementById("output").innerHTML = "Area = " + area;
+  document.getElementById("output").innerHTML = "Surface = " + area.toFixed(2);
 }

@@ -10,28 +10,37 @@
 </head>
 
 <body>
-    <div id="container__area">
+    <div id="container-area">
+        <h1 id="container-area__title">Calcule de Surface</h1>
 
         <form action="javascript:calculateArea()" onchange="javascript:updateForm()">
 
-            <label for="shapes">Sélectionner une forme</label>
+            <div class="container-area__selected-shape">
+                <label for="shapes">Sélectionner une forme</label>
+                <select id="shapes">
+                    <option value="circle" selected>cercle</option>
+                    <option value="triangle">triangle</option>
+                    <option value="square">carré</option>
+                    <option value="rectangle">rectangle</option>
+                </select>
+            </div>
 
-            <select id="shapes">
-                <option value="circle" selected>Cercle</option>
-                <option value="triangle">Triangle</option>
-                <option value="square">Carré</option>
-                <option value="rectangle">Rectangle</option>
-            </select>
+            <div class="container-area__selected-unity">
+                <label for="unity">Sélectionner une unité de mesure</label>
+                <select id="unity">
+                    <option value="meter" selected>mètre</option>
+                    <option value="centimeter">centimètre</option>
+                    <option value="millimeter">millimètre</option>
+                </select>
+            </div>
 
-            <br><br>
-
-            <div id="inputs-circle">
+            <div class="inputs" id="inputs-circle">
                 <label for="radius">Rayon</label>
                 <input id="radius" type="number" min="0" step="any">
                 <h2><em>A = &Pi;r<sup>2</sup></em></h2>
             </div>
 
-            <div id="inputs-triangle" hidden>
+            <div class="inputs" id="inputs-triangle" hidden>
                 <label for="base">Base</label>
                 <input id="base" type="number" min="0" step="any">
                 <label for="height">Hauteur</label>
@@ -39,13 +48,13 @@
                 <h2><em>A = <sup>bh</sup>&frasl;<sub>2</sub></em></h2>
             </div>
 
-            <div id="inputs-square" hidden>
+            <div class="inputs" id="inputs-square" hidden>
                 <label for="side">Côté</label>
                 <input id="side" type="number" min="0" step="any">
                 <h2><em>A = c<sup>2</sup></em></h2>
             </div>
 
-            <div id="inputs-rectangle" hidden>
+            <div class="inputs" id="inputs-rectangle" hidden>
                 <label for="length">longeur</label>
                 <input id="length" type="number" min="0" step="any">
                 <label for="width">largeur</label>
@@ -53,8 +62,11 @@
                 <h2><em>A = Ll</em></h2>
             </div>
 
-            <input type="submit" value="Calcul de la Surface">
-            <p id="output"></p>
+            <div class="container-area__result">
+                <input type="submit" value="Calcul de la Surface">
+                <p id="output"></p>
+            </div>
+
         </form>
     </div>
 
