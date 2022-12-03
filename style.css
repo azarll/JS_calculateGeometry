@@ -10,17 +10,26 @@
 }
 
 body {
+
     background-color: hsl(216, 86%, 11%);
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#main-menu {
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 50px;
-    font-family: 'Roboto', sans-serif;
 }
 
-a {
+
+.main-menu__button {
     position: relative;
     background: #ffffff;
     color: #fff;
@@ -32,32 +41,32 @@ a {
     transition: 0.5s;
 }
 
-a:hover {
+.main-menu__button:hover {
     background-color: var(--clr);
     color: var(--clr);
     letter-spacing: 0.25em;
     box-shadow: 0 0 35px var(--clr);
 }
 
-a:before {
+.main-menu__button:before {
     content: '';
     position: absolute;
     inset: 2px;
     background-color: hsl(216, 86%, 11%);
 }
 
-a span {
+.main-menu__button span {
     position: relative;
     z-index: 1;
 }
 
-a i {
+.main-menu__button i {
     position: absolute;
     inset: 0;
     display: block;
 }
 
-a i::before {
+.main-menu__button i::before {
     content: '';
     position: absolute;
     top: 0;
@@ -69,12 +78,12 @@ a i::before {
     transition: 0.5s;
 }
 
-a:hover i::before {
+.main-menu__button:hover i::before {
     width: 20px;
     left: 20%;
 }
 
-a i::after {
+.main-menu__button i::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -86,13 +95,14 @@ a i::after {
     transition: 0.5s;
 }
 
-a:hover i::after {
+.main-menu__button:hover i::after {
     width: 20px;
     left: 80%;
 }
 
 #container-area {
-    min-height: 10vh;
+    width: 600px;
+    max-width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -100,34 +110,39 @@ a:hover i::after {
     color: rgb(178, 154, 154);
     border: 2px solid #6eff3e;
     box-shadow: 0 0 35px #6eff3e;
-
     border-radius: 8px;
-    padding: 30px;
-}
+    margin: 0 auto;
+    font-size: 20px;
+  }
+
 
 #container-area .container-area__selected-shape,
 .container-area__button-submit {
-    padding-bottom: 20px;
-}
+    padding-bottom: 50px;
+} 
 
 #container-area .container-area__result {
     display: flex;
-    justify-content: space-around;
-    padding-top: 20px;
-    gap: 10px;
+    padding: 50px;
+    gap: 80px;
+  }
 
-}
-
-#container-area .inputs h2 {
+#container-area h2 {
     font-family: 'MonteCarlo', cursive;
-    padding-top: 20px;
+    font-size: 50px;
+    padding-top: 30px;
+
 }
 
 #container-area__title {
-    padding-bottom: 20px;
+    background-color: hsl(216, 86%, 11%);
+    padding: 20px 40px;
     color: rgba(255, 255, 255, 0.798);
+    border: 1px solid #6eff3e;
+    transform: translatey(-50%);
 }
 
 .container-area__selected-unity {
     padding-bottom: 20px;
 }
+

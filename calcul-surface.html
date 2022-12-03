@@ -8,6 +8,16 @@
     <title>Calcul de surface</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<header>
+    <nav>
+        <div class="btn-return">
+            <a href="index.html"><img src="/assets/images/retour-surface-64.png" alt="" srcset=""></a>
+            
+        </div>
+    </nav>
+</header>
+
+
 
 <body>
     <div id="container-area">
@@ -34,13 +44,13 @@
                 </select>
             </div>
 
-            <div class="inputs" id="inputs-circle">
+            <div id="inputs-circle">
                 <label for="radius">Rayon</label>
                 <input id="radius" type="number" min="0" step="any">
                 <h2><em>A = &Pi;r<sup>2</sup></em></h2>
             </div>
 
-            <div class="inputs" id="inputs-triangle" hidden>
+            <div id="inputs-triangle" hidden>
                 <label for="base">Base</label>
                 <input id="base" type="number" min="0" step="any">
                 <label for="height">Hauteur</label>
@@ -48,13 +58,13 @@
                 <h2><em>A = <sup>bh</sup>&frasl;<sub>2</sub></em></h2>
             </div>
 
-            <div class="inputs" id="inputs-square" hidden>
+            <div id="inputs-square" hidden>
                 <label for="side">Côté</label>
                 <input id="side" type="number" min="0" step="any">
                 <h2><em>A = c<sup>2</sup></em></h2>
             </div>
 
-            <div class="inputs" id="inputs-rectangle" hidden>
+            <div id="inputs-rectangle" hidden>
                 <label for="length">longeur</label>
                 <input id="length" type="number" min="0" step="any">
                 <label for="width">largeur</label>
