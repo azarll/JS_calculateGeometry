@@ -10,7 +10,6 @@
 }
 
 body {
-
     background-color: hsl(216, 86%, 11%);
     font-family: 'Roboto', sans-serif;
     display: flex;
@@ -100,49 +99,27 @@ body {
     left: 80%;
 }
 
-#container-area {
-    width: 600px;
-    max-width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    color: rgb(178, 154, 154);
-    border: 2px solid #6eff3e;
-    box-shadow: 0 0 35px #6eff3e;
-    border-radius: 8px;
-    margin: 0 auto;
-    font-size: 20px;
-  }
 
-
-#container-area .container-area__selected-shape,
-.container-area__button-submit {
-    padding-bottom: 50px;
-} 
-
-#container-area .container-area__result {
-    display: flex;
-    padding: 50px;
-    gap: 80px;
-  }
-
-#container-area h2 {
-    font-family: 'MonteCarlo', cursive;
-    font-size: 50px;
-    padding-top: 30px;
-
+.btn__goPerimeter {
+    position: fixed;
+    top: 300px;
+    left: 300px;
 }
 
-#container-area__title {
-    background-color: hsl(216, 86%, 11%);
-    padding: 20px 40px;
-    color: rgba(255, 255, 255, 0.798);
-    border: 1px solid #6eff3e;
-    transform: translatey(-50%);
+.btn__goVolume {
+    position: fixed;
+    top: 300px;
+    right: 300px;
 }
 
-.container-area__selected-unity {
-    padding-bottom: 20px;
+.btn__goAccueil {
+    position: fixed;
+    top: 50px;
+    left: 50px;
 }
 
+.btn__goSurface {
+    position: fixed;
+    top: 300px;
+    left: 300px;
+}

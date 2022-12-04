@@ -6,12 +6,80 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calcul du volume</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./assets/css/global.css">
+    <link rel="stylesheet" href="./assets/css/volume.css">
 </head>
 
 <body>
-    <h1>Calcul du volume</h1>
+    <div class="btn__icon btn__goPerimeter">
+        <a href="calcul-perimetre.html"><img src="/assets/images/goRightVolume.png" alt="" srcset=""></a>
+    </div>
+    <div class="btn__icon btn__goVolume">
+        <a href="calcul-volume.html"><img src="/assets/images/goLeftVolume.png" alt="" srcset=""></a>
+    </div>
+    <div class="btn__icon btn__goAccueil">
+        <a href="index.html"><img src="/assets/images/goAccueilVolume.png" alt="" srcset=""></a>
+    </div>
 
+    <div id="container-volume">
+        <h1 id="container-volume__title">Calcul du Volume</h1>
+
+        <form action="javascript:calculateVolume()" onchange="javascript:updateForm()">
+
+            <div class="container-volume__selected-shape">
+                <label for="shapes">Sélectionner votre forme</label>
+                <select id="shapes">
+                    <option value="sphere" selected>sphere</option>
+                    <option value="prism">prisme</option>
+                    <option value="cylinder">Cylindre</option>
+                    <option value="cone">Cône</option>
+                </select>
+            </div>
+
+            <div class="container-volume__selected-unity">
+                <label for="unity">Sélectionner une unité de mesure</label>
+                <select id="unity">
+                    <option value="meter" selected>mètre</option>
+                    <option value="centimeter">centimètre</option>
+                    <option value="millimeter">millimètre</option>
+                </select>
+            </div>
+            <div id="inputs-sphere">
+                <label for="radius">Rayon</label>
+                <input id="radius" type="number" min="0" step="any">
+                <h2><em>A = 4&Pi;r<sup>3</sup>/3</em></h2>
+            </div>
+            <div id="inputs-cone" hidden>
+                <label for="base">Base</label>
+                <input id="base" type="number" min="0" step="any">
+                <label for="height">Hauteur</label>
+                <input id="height" type="number" min="0" step="any">
+                <h2><em>A = <sup>bh</sup>&frasl;<sub>2</sub></em></h2>
+            </div>
+            <div id="inputs-prism" hidden>
+                <label for="lengthPrism">Longueur</label>
+                <input id="lengthPrism" type="number" min="0" step="any">
+                <label for="widthPrism">Largeur</label>
+                <input id="widthPrism" type="number" min="0" step="any">
+                <label for="heightPrism">Hauteur</label>
+                <input id="heightPrism" type="number" min="0" step="any">
+                <h2><em>A = c<sup>3</sup></em></h2>
+            </div>
+            <div id="inputs-cylinder" hidden>
+                <label for="length">longeur</label>
+                <input id="length" type="number" min="0" step="any">
+                <label for="width">largeur</label>
+                <input id="width" type="number" min="0" step="any">
+                <h2><em>A = Ll</em></h2>
+            </div>
+            <div class="container-volume__result">
+                <button class="main-menu__button" type="submit"
+                    style="--clr:#ff1867"><span>Résultat</span><i></i></button>
+                <p id="output"></p>
+            </div>
+        </form>
+    </div>
+    <script src="./app.js/volume.js"></script>
 </body>
 
 </html>
